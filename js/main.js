@@ -169,6 +169,7 @@ jQuery(document).ready(function($) {
                 }
             };
         	eventList.sort(function(a,b){return a.seconds-b.seconds});
+        	eventList.slice(0, 7);
 
         	setTimeout(function() {
         		updateCalendarData();
