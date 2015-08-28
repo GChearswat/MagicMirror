@@ -154,6 +154,7 @@ function ical_parser(feed_url, callback){
 		this.events.sort(function(a,b){
 			return a.DTSTART-b.DTSTART;
 		});
+		this.events.slice(0, 7)
 		//Run callback method, if was defined. (return self)
 		if(typeof callback == 'function') callback(this);
 	}
@@ -180,7 +181,7 @@ function ical_parser(feed_url, callback){
 			//If the event ends after the current time, add it to the array to return.
 			if(itm.DTEND > current_date) future_events.push(itm);
 		});
-		return future_events.slice(0, 7);
+		return future_events;
 	}
 	
 	/**
