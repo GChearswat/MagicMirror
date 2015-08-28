@@ -1,7 +1,7 @@
 // for navigator language
-var lang = window.navigator.language;
+// var lang = window.navigator.language;
 // you can change the language
-// var lang = 'en';
+var lang = 'en';
 
 //change weather params here:
 //units: metric or imperial
@@ -19,13 +19,13 @@ var feed = "http://feeds.reuters.com/reuters/topNews"
 
 // compliments:
 var morning = [
-            'Good morning, handsome!',
+            'Good morning, beautiful!',
             'Enjoy your day!',
             'How was your sleep?'
         ];
         
 var afternoon = [
-            'Hello, beauty!',
+            'Hello, beautiful!',
             'You look sexy!',
             'Looking good today!'
         ];
@@ -33,5 +33,5 @@ var afternoon = [
 var evening = [
             'Wow, you look hot!',
             'You look nice!',
-            'Hi, sexy!'
+            'Hey, sexy!'
         ];
