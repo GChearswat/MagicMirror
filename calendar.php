@@ -1,7 +1,7 @@
 <?php
 	
-	// Set the url of the calendar feed.
-	$url = 'https://www.google.com/calendar/ical/en.usa%23holiday%40group.v.calendar.google.com/public/basic.ics';
+	// Set the url from environment variable (private calendars)
+	$url = getenv('ICAL_ADDRESS');
 
 	/*****************************************/
 
