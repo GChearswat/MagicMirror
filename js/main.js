@@ -268,10 +268,10 @@ jQuery(document).ready(function($) {
 			// $('.forecast').updateWithText(forecast, 1000);
 
 			var now = new Date();
-			var sunriseDate = new Date(json.sys.sunrise*1000).toLocaleTimeString();
-			var sunsetDate = new Date(json.sys.sunset*1000).toLocaleTimeString();
-			var sunrise = sunriseDate.substring(0, sunriseDate.length - 6) + " AM";
-			var sunset = sunsetDate.substring(0, sunsetDate.length -6) + " PM";
+			var sunriseDate = new Date(json.sys.sunrise*1000);
+			var sunsetDate = new Date(json.sys.sunset*1000);
+			var sunrise = moment.utc(sunriseDate).zone("-07:00").format("h:mm A");
+			var sunset = moment.utc(sunsetDate).zone("-07:00").format("h:mm A");
 
 			var windString = '<span class="wi wi-strong-wind xdimmed"></span> ' + kmh2beaufort(wind) ;
 			var sunString = '<span class="wi wi-sunrise xdimmed"></span> ' + sunrise;
