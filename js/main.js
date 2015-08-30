@@ -83,7 +83,7 @@ jQuery(document).ready(function($) {
         date = date[0] + ' ' + date[1] + ' ' + date[2] + ' ' + date[3];
 
 		$('.date').html(date);
-		$('.time').html(now.format('h') + ':' + now.format('mm') + '<span class="sec">'+now.format('ss')+'</span> '+ now.format('a').toUpperCase());
+		$('.time').html(now.format('hh') + ':' + now.format('mm') + '<span class="sec">'+now.format('ss')+'</span> '+ now.format('a').toUpperCase());
 
 		setTimeout(function() {
 			updateTime();
@@ -268,8 +268,10 @@ jQuery(document).ready(function($) {
 			// $('.forecast').updateWithText(forecast, 1000);
 
 			var now = new Date();
-			var sunrise = new Date(json.sys.sunrise*1000).toTimeString().substring(0,5);
-			var sunset = new Date(json.sys.sunset*1000).toTimeString().substring(0,5);
+			var sunriseDate = new Date(json.sys.sunrise*1000).toLocaleTimeString();
+			var sunsetDate = new Date(json.sys.sunset*1000).toLocaleTimeString();
+			var sunrise = sunriseDate.substring(0, sunriseDate.length - 6) + " AM";
+			var sunset = sunsetDate.substring(0, sunsetDate.length -6) + " PM";
 
 			var windString = '<span class="wi wi-strong-wind xdimmed"></span> ' + kmh2beaufort(wind) ;
 			var sunString = '<span class="wi wi-sunrise xdimmed"></span> ' + sunrise;
@@ -341,8 +343,8 @@ jQuery(document).ready(function($) {
 
 				row.append($('<td/>').addClass('day').html(moment.weekdaysShort(dt.getDay())));
 				row.append($('<td/>').addClass('icon-small').addClass(iconClass));
-				row.append($('<td/>').addClass('temp-max').html(roundVal(forecast.temp_max) + "&deg;"));
-				row.append($('<td/>').addClass('temp-min').html(roundVal(forecast.temp_min) + "&deg;"));
+				row.append($('<td/>').addClass('temp-max').html(roundVal(Math.round(forecast.temp_max)) + "&deg;"));
+				row.append($('<td/>').addClass('temp-min').html(roundVal(Math.round(forecast.temp_min)) + "&deg;"));
 
 				forecastTable.append(row);
 				opacity -= 0.155;
