@@ -262,7 +262,7 @@ jQuery(document).ready(function($) {
 
 			var iconClass = iconTable[json.weather[0].icon];
 			var icon = $('<span/>').addClass('icon').addClass('dimmed').addClass('wi').addClass(iconClass);
-			$('.temp').updateWithText(icon.outerHTML()+temp+'&deg;', 1000);
+			$('.temp').updateWithText(icon.outerHTML()+temp+'&deg;F', 1000);
 
 			// var forecast = 'Min: '+temp_min+'&deg;, Max: '+temp_max+'&deg;';
 			// $('.forecast').updateWithText(forecast, 1000);
