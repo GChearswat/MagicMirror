@@ -12,7 +12,7 @@
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 </head>
 <body>
-
+	<h1>derp<h1>
 	<div class="top left"><div class="date small dimmed"></div><div class="time"></div><div class="calendar xxsmall"></div></div>
 	<div class="top right"><div class="windsun small dimmed"></div><div class="temp"></div><div class="forecast small dimmed"></div></div>
 	<div class="center-ver center-hor"><!-- <div class="dishwasher light">Vaatwasser is klaar!</div> --></div>
