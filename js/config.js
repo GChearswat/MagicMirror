@@ -19,19 +19,12 @@ var feed = "http://feeds.reuters.com/reuters/topNews"
 
 // compliments:
 var morning = [
-            'Good morning, beautiful!',
-            'Enjoy your day!',
-            'How was your sleep?'
+            "WTF"
         ];
         
 var afternoon = [
-            'Hello, beautiful!',
-            'You look sexy!',
-            'Looking good today!'
-        ];
+            "ULGH WHY"        ];
        
 var evening = [
-            'Wow, you look hot!',
-            'You look nice!',
-            'Hey, sexy!'
+            "WHAT"
         ];
